@@ -7,8 +7,8 @@ const server = express()
 
 server.use(
     cors({
-        origin: "http://localhost:63342",
-        credentials: true
+        origin: "*",
+
     })
 )
 
@@ -26,7 +26,7 @@ async function start(){
                 useUnifiedTopology: true
             })
         server.get('/',(req, res)=>{
-            res.send('Hello world!!');
+            res.send('Hello world!!!');
         })
         server.listen(process.env.PORT || PORT,()=>{
             console.log(`Server has started on ${PORT} `)
