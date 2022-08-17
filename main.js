@@ -7,14 +7,15 @@ const server = express()
 
 server.use(
     cors({
-        origin: "http://localhost:63342"
+        origin: "http://localhost:63342",
+        credentials: true
     })
 )
 
 //routes
 server.use('/auth', require('./routes/auth.routes'))
 
-const PORT = 3000
+const PORT = 5000
 
 //function start server
 async function start(){
