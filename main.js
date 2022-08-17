@@ -12,6 +12,8 @@ server.use(
     })
 )
 
+server.use(express.json({extended: true}))
+
 //routes
 server.use('/auth', require('./routes/auth.routes'))
 
